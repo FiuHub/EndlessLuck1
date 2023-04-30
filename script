@@ -92,7 +92,7 @@ end
                state = false
             })
                toggle:bindToEvent('onToggle', function(newState)
-                  getgenv().farm_1b = newState
+                  getgenv().farm_5b = newState
                   if newState then
                      farm5()
                   end
@@ -102,7 +102,7 @@ end
                state = false
             })
                toggle:bindToEvent('onToggle', function(newState)
-                  getgenv().farm_2b = newState
+                  getgenv().farm_6b = newState
                   if newState then
                      farm6()
                   end
@@ -112,7 +112,7 @@ end
                state = false
             })
                toggle:bindToEvent('onToggle', function(newState)
-                  getgenv().farm_3b = newState
+                  getgenv().farm_7b = newState
                   if newState then
                      farm7()
                   end
@@ -122,7 +122,7 @@ end
                state = false
             })
                toggle:bindToEvent('onToggle', function(newState)
-                  getgenv().farm_4b = newState
+                  getgenv().farm_8b = newState
                   if newState then
                      farm8()
                   end
@@ -132,7 +132,7 @@ end
                state = false
             })
                toggle:bindToEvent('onToggle', function(newState)
-                  getgenv().farm_5b = newState
+                  getgenv().farm_9b = newState
                   if newState then
                      farm8()
                   end
@@ -201,33 +201,5 @@ function farm9()
           game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-64.33702087402344, 3.4980247020721436, 44.398380279541016 --Rebirth ON
           wait(getgenv().singlespeed)
        end
-    end)
-end
-
-function farm10()
-    spawn(function()
-        while getgenv().farm_10b == true do
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-74.79879760742188, 16.25, 60.789546966552734)  --Roll
-            wait(getgenv().singlespeed)
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-143.16265869140625, 16.25, 69.48428344726562) --Buy ON
-            wait(getgenv().singlespeed)
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-178.8574676513672, 16.25, 15.863898277282715) --Ultra ON
-            wait(getgenv().singlespeed)
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-178.68551635742188, 16.25, 91.68464660644531) --Mega ON
-            wait(getgenv().singlespeed)
-        end
-    end)
-end
-
-function farm11()
-    spawn(function()
-        while getgenv().farm_11b == true do
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-75.09910583496094, 16.25, 60.40922546386719)  --Roll
-            wait(getgenv().singlespeed)
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-143.16265869140625, 16.25, 69.48428344726562) --Buy ON
-            wait(getgenv().singlespeed)
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-178.8574676513672, 16.25, 15.863898277282715) --Ultra ON
-            wait(getgenv().singlespeed)
-        end
     end)
 end
