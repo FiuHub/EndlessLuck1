@@ -167,30 +167,6 @@ end
             }, function(newValue)
                getgenv().singlespeed = newValue
             end)
-      local section = menu:addSection({
-         text = 'Transcend Farms',
-         side = 'left',
-         showMinButton = true,
-         })
-            local toggle = section:addToggle({
-               text = 'Roll For Transcend',
-               state = false
-            })
-               toggle:bindToEvent('onToggle', function(newState)
-                  getgenv().farm_9b = newState
-                  if newState then
-                     farm9()
-                  end
-               end)
-               section:addSlider({
-                  text = 'Attempts',
-                  min = 10,
-                  max = 50,
-                  step = 1,
-                  val = 15
-              }, function(newValue)
-                  getgenv().attempts = newValue
-              end):setTooltip('How Many Attempts for Transcend')
 end
 ---Single Functions ---
 
