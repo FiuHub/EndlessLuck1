@@ -185,7 +185,7 @@ function farm8()
       while getgenv().farm_8b == true do
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1.0396232604980469, 3.4980247020721436, -63.1410026550293)  --Roll
          wait(getgenv().singlespeed)
-         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-62.623497009277344, 3.4980247020721436, -2.543419361114502  ) --Transcend ON
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-62.623497009277344, 3.4980247020721436, -2.543419361114502) --Transcend ON
          wait(getgenv().singlespeed)
       end
    end)
