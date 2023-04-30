@@ -14,7 +14,6 @@ getgenv().farm_4b = false
 getgenv().farm_5b = false
 getgenv().farm_6b = false
 getgenv().farm_7b = false
-getgenv().farm_8b = false
 
 local window = ui.newWindow({
     ui.notify({
