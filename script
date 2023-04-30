@@ -149,9 +149,9 @@ end
 end
 ---Single Functions ---
 
-function farm1()
+function farm5()
     spawn(function()
-       while getgenv().farm_1b == true do
+       while getgenv().farm_5b == true do
           game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1.0396232604980469, 3.4980247020721436, -63.1410026550293)  --Roll
           wait(getgenv().singlespeed)
           game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-31.137292861938477, 3.4980247020721436, -63.23887252807617) --Sacrifice ON
@@ -160,9 +160,9 @@ function farm1()
     end)
 end
 
-function farm2()
+function farm6()
     spawn(function()
-        while getgenv().farm_2b == true do
+        while getgenv().farm_6b == true do
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1.0396232604980469, 3.4980247020721436, -63.1410026550293)  --Roll
             wait(getgenv().singlespeed)
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-60.33673858642578, 3.4980247020721436, -63.04488754272461) --Prestige ON
@@ -171,9 +171,9 @@ function farm2()
     end)
 end
 
-function farm3()
+function farm7()
    spawn(function()
-      while getgenv().farm_3b == true do
+      while getgenv().farm_7b == true do
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1.0396232604980469, 3.4980247020721436, -63.1410026550293)  --Roll
          wait(getgenv().singlespeed)
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-63.5042839050293, 3.4980247020721436, -33.39970016479492) --Ascend ON
@@ -182,9 +182,9 @@ function farm3()
    end)
 end
 
-function farm4()
+function farm8()
    spawn(function()
-      while getgenv().farm_4b == true do
+      while getgenv().farm_8b == true do
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1.0396232604980469, 3.4980247020721436, -63.1410026550293)  --Roll
          wait(getgenv().singlespeed)
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-62.623497009277344, 3.4980247020721436, -2.543419361114502  ) --Transcend ON
@@ -193,9 +193,9 @@ function farm4()
    end)
 end
 
-function farm5()
+function farm9()
     spawn(function()
-       while getgenv().farm_5b == true do
+       while getgenv().farm_9b == true do
           game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1.0396232604980469, 3.4980247020721436, -63.1410026550293)  --Roll
           wait(getgenv().singlespeed)
           game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-64.33702087402344, 3.4980247020721436, 44.398380279541016 --Rebirth ON
@@ -204,9 +204,9 @@ function farm5()
     end)
 end
 
-function farm6()
+function farm10()
     spawn(function()
-        while getgenv().farm_6b == true do
+        while getgenv().farm_10b == true do
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-74.79879760742188, 16.25, 60.789546966552734)  --Roll
             wait(getgenv().singlespeed)
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-143.16265869140625, 16.25, 69.48428344726562) --Buy ON
@@ -219,9 +219,9 @@ function farm6()
     end)
 end
 
-function farm7()
+function farm11()
     spawn(function()
-        while getgenv().farm_7b == true do
+        while getgenv().farm_11b == true do
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-75.09910583496094, 16.25, 60.40922546386719)  --Roll
             wait(getgenv().singlespeed)
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-143.16265869140625, 16.25, 69.48428344726562) --Buy ON
