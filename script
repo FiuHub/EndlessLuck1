@@ -128,36 +128,6 @@ end
                      farm8()
                   end
                end)
-            local toggle = section:addToggle({
-               text = 'Roll and Rebirth',
-               state = false
-            })
-               toggle:bindToEvent('onToggle', function(newState)
-                  getgenv().farm_10b = newState
-                  if newState then
-                     farm10()
-                  end
-               end)
-            local toggle = section:addToggle({
-               text = 'Roll and MegaPoint',
-               state = false
-            })
-               toggle:bindToEvent('onToggle', function(newState)
-                  getgenv().farm_11b = newState
-                  if newState then
-                     farm11()
-                  end
-               end)
-            local toggle = section:addToggle({
-               text = 'Roll and UltraPoint',
-               state = false
-            })
-               toggle:bindToEvent('onToggle', function(newState)
-                  getgenv().farm_12b = newState
-                  if newState then
-                     farm12()
-                  end
-               end)
                section:addSlider({
                   text = 'Wait Time',
                   min = 0.1,
