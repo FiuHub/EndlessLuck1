@@ -7,7 +7,6 @@ local ui = uiLoader({
     smoothDragging = true
 })
 
---- Getgenv ---
 getgenv().farm_1b = false
 getgenv().farm_2b = false
 getgenv().farm_3b = false
@@ -15,7 +14,7 @@ getgenv().farm_4b = false
 getgenv().farm_5b = false
 getgenv().farm_6b = false
 getgenv().farm_7b = false
-getgenv().farm_9b = false
+getgenv().farm_8b = false
 
 local window = ui.newWindow({
     ui.notify({
@@ -78,15 +77,14 @@ do
 end
 
     local menu = window:addMenu({
-        text = 'Farming'
+        text = 'Farm'
     })
     do
     local section = menu:addSection({
-        text = 'First Area',
+        text = 'Fast Farm',
         side = 'left',
         showMinButton = true,
     })
-   local toggle = section:addToggle({
             section:addLabel({
                text = '[!Flash Warning!]'
             })
@@ -95,7 +93,7 @@ end
                state = false
             })
                toggle:bindToEvent('onToggle', function(newState)
-                  getgenv().farm_1b = newState
+                  getgenv().farm_5b = newState
                   if newState then
                      farm5()
                   end
@@ -105,7 +103,7 @@ end
                state = false
             })
                toggle:bindToEvent('onToggle', function(newState)
-                  getgenv().farm_2b = newState
+                  getgenv().farm_6b = newState
                   if newState then
                      farm6()
                   end
@@ -115,7 +113,7 @@ end
                state = false
             })
                toggle:bindToEvent('onToggle', function(newState)
-                  getgenv().farm_3b = newState
+                  getgenv().farm_7b = newState
                   if newState then
                      farm7()
                   end
@@ -125,7 +123,7 @@ end
                state = false
             })
                toggle:bindToEvent('onToggle', function(newState)
-                  getgenv().farm_4b = newState
+                  getgenv().farm_8b = newState
                   if newState then
                      farm8()
                   end
@@ -135,7 +133,7 @@ end
                state = false
             })
                toggle:bindToEvent('onToggle', function(newState)
-                  getgenv().farm_5b = newState
+                  getgenv().farm_10b = newState
                   if newState then
                      farm10()
                   end
@@ -145,7 +143,7 @@ end
                state = false
             })
                toggle:bindToEvent('onToggle', function(newState)
-                  getgenv().farm_6b = newState
+                  getgenv().farm_11b = newState
                   if newState then
                      farm11()
                   end
@@ -155,7 +153,7 @@ end
                state = false
             })
                toggle:bindToEvent('onToggle', function(newState)
-                  getgenv().farm_7b = newState
+                  getgenv().farm_12b = newState
                   if newState then
                      farm12()
                   end
@@ -169,12 +167,36 @@ end
             }, function(newValue)
                getgenv().singlespeed = newValue
             end)
+      local section = menu:addSection({
+         text = 'Transcend Farms',
+         side = 'left',
+         showMinButton = true,
+         })
+            local toggle = section:addToggle({
+               text = 'Roll For Transcend',
+               state = false
+            })
+               toggle:bindToEvent('onToggle', function(newState)
+                  getgenv().farm_9b = newState
+                  if newState then
+                     farm9()
+                  end
+               end)
+               section:addSlider({
+                  text = 'Attempts',
+                  min = 10,
+                  max = 50,
+                  step = 1,
+                  val = 15
+              }, function(newValue)
+                  getgenv().attempts = newValue
+              end):setTooltip('How Many Attempts for Transcend')
 end
 ---Single Functions ---
 
-function farm1()
+function farm5()
     spawn(function()
-       while getgenv().farm_1b == true do
+       while getgenv().farm_5b == true do
           game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1.0396232604980469, 3.4980247020721436, -63.1410026550293)  --Roll
           wait(getgenv().singlespeed)
           game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-31.137292861938477, 3.4980247020721436, -63.23887252807617) --Sacrifice ON
@@ -183,9 +205,9 @@ function farm1()
     end)
 end
 
-function farm2()
+function farm6()
     spawn(function()
-        while getgenv().farm_2b == true do
+        while getgenv().farm_6b == true do
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0.2153051793575287, 3, 39.72328567504883)  --Roll
             wait(getgenv().singlespeed)
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-60.33673858642578, 3.4980247020721436, -63.04488754272461) --Prestige ON
@@ -194,9 +216,9 @@ function farm2()
     end)
 end
 
-function farm3()
+function farm7()
    spawn(function()
-      while getgenv().farm_3b == true do
+      while getgenv().farm_7b == true do
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0.2153051793575287, 3, 39.72328567504883)  --Roll
          wait(getgenv().singlespeed)
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-63.5042839050293, 3.4980247020721436, -33.39970016479492) --Ascend ON
@@ -205,9 +227,9 @@ function farm3()
    end)
 end
 
-function farm4()
+function farm8()
    spawn(function()
-      while getgenv().farm_4b == true do
+      while getgenv().farm_8b == true do
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0.2153051793575287, 3, 39.72328567504883)  --Roll
          wait(getgenv().singlespeed)
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-62.623497009277344, 3.4980247020721436, -2.543419361114502  ) --Transcend ON
@@ -216,9 +238,9 @@ function farm4()
    end)
 end
 
-function farm5()
+function farm10()
     spawn(function()
-       while getgenv().farm_5b == true do
+       while getgenv().farm_10b == true do
           game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-144.97335815429688, 16.25, 69.21959686279297)  --Roll
           wait(getgenv().singlespeed)
           game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-74.79879760742188, 16.25, 60.789546966552734) --Rebirth ON
@@ -227,9 +249,9 @@ function farm5()
     end)
 end
 
-function farm6()
+function farm11()
     spawn(function()
-        while getgenv().farm_6b == true do
+        while getgenv().farm_11b == true do
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-74.79879760742188, 16.25, 60.789546966552734)  --Roll
             wait(getgenv().singlespeed)
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-143.16265869140625, 16.25, 69.48428344726562) --Buy ON
@@ -242,9 +264,9 @@ function farm6()
     end)
 end
 
-function farm7()
+function farm12()
     spawn(function()
-        while getgenv().farm_7b == true do
+        while getgenv().farm_12b == true do
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-75.09910583496094, 16.25, 60.40922546386719)  --Roll
             wait(getgenv().singlespeed)
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-143.16265869140625, 16.25, 69.48428344726562) --Buy ON
