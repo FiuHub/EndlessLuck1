@@ -196,7 +196,7 @@ function farm9()
        while getgenv().farm_9b == true do
           game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1.0396232604980469, 3.4980247020721436, -63.1410026550293)  --Roll
           wait(getgenv().singlespeed)
-          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-64.33702087402344, 3.4980247020721436, 44.398380279541016 --Rebirth ON
+          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-64.33702087402344, 3.4980247020721436, 44.398380279541016) --Rebirth ON
           wait(getgenv().singlespeed)
        end
     end)
