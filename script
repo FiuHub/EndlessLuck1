@@ -1,0 +1,256 @@
+-- By Oto
+local uiLoader = loadstring(game:HttpGet('https://raw.githubusercontent.com/topitbopit/dollarware/main/library.lua'))
+
+local ui = uiLoader({
+    rounding = true,
+    theme = 'grape',
+    smoothDragging = true
+})
+
+--- Getgenv ---
+getgenv().farm_1b = false
+getgenv().farm_2b = false
+getgenv().farm_3b = false
+getgenv().farm_4b = false
+getgenv().farm_5b = false
+getgenv().farm_6b = false
+getgenv().farm_7b = false
+getgenv().farm_9b = false
+
+local window = ui.newWindow({
+    ui.notify({
+        title = 'Thx For using',
+        message = 'Made by Oto',
+        duration = 10
+    }),
+    text = 'Endless Luck',
+    resize = true,
+    size = Vector2.new(550, 400),
+    position = nil
+})
+do
+--- Menu 1 ---
+    local menu = window:addMenu({
+        text = 'Teleport To Spots'
+    })
+    do
+    local section = menu:addSection({
+        text = 'First Area',
+        side = 'left',
+        showMinButton = true,
+    })
+        section:addButton({
+            text = 'Teleport To Roll',
+            style = 'large'
+        }, function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0.5412289500236511, 3.4980247020721436, -63.871986389160156) -- Roll
+        end)
+        
+        section:addButton({
+            text = 'Teleport To Rebirth',
+            style = 'large'
+        }, function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-28.975576400756836, 3.4980247020721436, -63.441009521484375) -- Sacrifice
+        end)
+        
+        section:addButton({
+            text = 'Teleport To Ultra',
+            style = 'large'
+        }, function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-60.684993743896484, 3.4980247020721436, -63.42972946166992) -- Luck
+        end)
+        
+        section:addButton({
+            text = 'Teleport To Prestige',
+            style = 'large'
+        }, function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-63.94091796875, 3.4980247020721436, -32.66230010986328) -- Roll Cooldown
+        end)
+        
+        section:addButton({
+            text = 'Teleport To Mega',
+            style = 'large'
+        }, function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-63.715782165527344, 3.4980247020721436, -0.9693058729171753) -- Roll Cooldown
+        end)
+    
+    end
+end
+
+    local menu = window:addMenu({
+        text = 'Farming'
+    })
+    do
+    local section = menu:addSection({
+        text = 'First Area',
+        side = 'left',
+        showMinButton = true,
+    })
+   local toggle = section:addToggle({
+            section:addLabel({
+               text = '[!Flash Warning!]'
+            })
+            local toggle = section:addToggle({
+               text = 'Roll and Rebirth',
+               state = false
+            })
+               toggle:bindToEvent('onToggle', function(newState)
+                  getgenv().farm_1b = newState
+                  if newState then
+                     farm5()
+                  end
+               end)
+            local toggle = section:addToggle({
+               text = 'Roll and Ultra',
+               state = false
+            })
+               toggle:bindToEvent('onToggle', function(newState)
+                  getgenv().farm_2b = newState
+                  if newState then
+                     farm6()
+                  end
+               end)
+            local toggle = section:addToggle({
+               text = 'Roll and Prestige',
+               state = false
+            })
+               toggle:bindToEvent('onToggle', function(newState)
+                  getgenv().farm_3b = newState
+                  if newState then
+                     farm7()
+                  end
+               end)
+            local toggle = section:addToggle({
+               text = 'Roll and Mega',
+               state = false
+            })
+               toggle:bindToEvent('onToggle', function(newState)
+                  getgenv().farm_4b = newState
+                  if newState then
+                     farm8()
+                  end
+               end)
+            local toggle = section:addToggle({
+               text = 'Roll and Rebirth',
+               state = false
+            })
+               toggle:bindToEvent('onToggle', function(newState)
+                  getgenv().farm_5b = newState
+                  if newState then
+                     farm10()
+                  end
+               end)
+            local toggle = section:addToggle({
+               text = 'Roll and MegaPoint',
+               state = false
+            })
+               toggle:bindToEvent('onToggle', function(newState)
+                  getgenv().farm_6b = newState
+                  if newState then
+                     farm11()
+                  end
+               end)
+            local toggle = section:addToggle({
+               text = 'Roll and UltraPoint',
+               state = false
+            })
+               toggle:bindToEvent('onToggle', function(newState)
+                  getgenv().farm_7b = newState
+                  if newState then
+                     farm12()
+                  end
+               end)
+               section:addSlider({
+                  text = 'Wait Time',
+                  min = 0.1,
+                  max = 4,
+                  step = 0.1,
+                  val = 0.5
+            }, function(newValue)
+               getgenv().singlespeed = newValue
+            end)
+end
+---Single Functions ---
+
+function farm1()
+    spawn(function()
+       while getgenv().farm_1b == true do
+          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1.0396232604980469, 3.4980247020721436, -63.1410026550293)  --Roll
+          wait(getgenv().singlespeed)
+          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-31.137292861938477, 3.4980247020721436, -63.23887252807617) --Sacrifice ON
+          wait(getgenv().singlespeed)
+       end
+    end)
+end
+
+function farm2()
+    spawn(function()
+        while getgenv().farm_2b == true do
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0.2153051793575287, 3, 39.72328567504883)  --Roll
+            wait(getgenv().singlespeed)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-60.33673858642578, 3.4980247020721436, -63.04488754272461) --Prestige ON
+            wait(getgenv().singlespeed)
+        end
+    end)
+end
+
+function farm3()
+   spawn(function()
+      while getgenv().farm_3b == true do
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0.2153051793575287, 3, 39.72328567504883)  --Roll
+         wait(getgenv().singlespeed)
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-63.5042839050293, 3.4980247020721436, -33.39970016479492) --Ascend ON
+         wait(getgenv().singlespeed)
+      end
+   end)
+end
+
+function farm4()
+   spawn(function()
+      while getgenv().farm_4b == true do
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0.2153051793575287, 3, 39.72328567504883)  --Roll
+         wait(getgenv().singlespeed)
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-62.623497009277344, 3.4980247020721436, -2.543419361114502  ) --Transcend ON
+         wait(getgenv().singlespeed)
+      end
+   end)
+end
+
+function farm5()
+    spawn(function()
+       while getgenv().farm_5b == true do
+          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-144.97335815429688, 16.25, 69.21959686279297)  --Roll
+          wait(getgenv().singlespeed)
+          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-74.79879760742188, 16.25, 60.789546966552734) --Rebirth ON
+          wait(getgenv().singlespeed)
+       end
+    end)
+end
+
+function farm6()
+    spawn(function()
+        while getgenv().farm_6b == true do
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-74.79879760742188, 16.25, 60.789546966552734)  --Roll
+            wait(getgenv().singlespeed)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-143.16265869140625, 16.25, 69.48428344726562) --Buy ON
+            wait(getgenv().singlespeed)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-178.8574676513672, 16.25, 15.863898277282715) --Ultra ON
+            wait(getgenv().singlespeed)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-178.68551635742188, 16.25, 91.68464660644531) --Mega ON
+            wait(getgenv().singlespeed)
+        end
+    end)
+end
+
+function farm7()
+    spawn(function()
+        while getgenv().farm_7b == true do
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-75.09910583496094, 16.25, 60.40922546386719)  --Roll
+            wait(getgenv().singlespeed)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-143.16265869140625, 16.25, 69.48428344726562) --Buy ON
+            wait(getgenv().singlespeed)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-178.8574676513672, 16.25, 15.863898277282715) --Ultra ON
+            wait(getgenv().singlespeed)
+        end
+    end)
+end
